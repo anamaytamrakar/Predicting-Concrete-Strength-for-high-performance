@@ -1,4 +1,4 @@
-## Observations:
+## Observations: 78/80
 1 - Missed to give the detailed inference for EDA, feature selection and feature engineering, Model Building & output. 
 2 - Diagonals Analysis:The diagonal gives the same information, we got using distplot. 
 3 - Cement attribute have almost normal curve. 
