@@ -51,6 +51,4 @@
      strength vs superplastic: Other attributes does not give any strong relationship with strength. 
      Hence, we can see that none of the independent attributes are a good predictors of the strength attribute. 
      There is a no linear relationship between them.
-     So, we will not use Linear model 
-     
-     
+     So, we will not use Linear model
