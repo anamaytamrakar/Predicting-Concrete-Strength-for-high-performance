@@ -1,0 +1,56 @@
+## Observations:
+1 - Missed to give the detailed inference for EDA, feature selection and feature engineering, Model Building & output. 
+2 - Diagonals Analysis:The diagonal gives the same information, we got using distplot. 
+3 - Cement attribute have almost normal curve. 
+4 - Slag has two gausssians and rightly skewed. It shows the presence of outliers. 
+5 - ash has two gaussians and rightly skewed. It shows the presence of outliers.
+6 - water has atleast 2 guassians and slightly left skewed.It shows the presence of outliers. 
+7 - superplastic has multiple gaussians and rightly skewed.It shows the presence of outliers. 
+8 - coarseagg has three guassians and almost normal. 
+9 - fineagg has almost two guassians and looks like normal. 
+10 - age has multiple guassians and rightly skewed. It shows the presence of outliers. 
+11 - strength is close to a normal curve. 
+12 - We not only have missing values problem but also outliers problem in the dataset. 
+13 - Off Diagonal Analysis: Relationship between indpendent attributes. Scatter plots cement vs other independent attributes: 
+    This attribute does not have any significant relation with slag, ash, water, superplatic, coarseagg,fineagg and age. 
+    It almost spread like a cloud. If we had calculated the r value it would have come close to 0. 
+14 - slag vs other independent attributes: 
+    This attribute also does not have any significant relation with ash, water, superplatic, coarseagg,fineagg and age. 
+    It almost spread like a cloud. If we had calculated the r value it would have come close to 0. 
+15 - ash vs other independent attributes: 
+    This attribute also does not have any significant relation with water, superplatic, coarseagg,fineagg and age. 
+    It almost spread like a cloud. If we had calculated the r value it would have come close to 0. 
+16 - Water vs other independent attributes: 
+     This attribute have negative linear relationship with superplastic and fineagg. 
+     It does not have any significant relationship with other independent atributes. 
+     This is true as Superplasticizers allows the reduction of water in the concrete upto the extent of 30% without reducing the workability. 
+17 - Superplastic vs other independent attributes:
+     This attribute have negative linear relationship with water only. 
+     It does not have any significant relationship with other independent attributes. 
+18 - coarseagg vs other independent attributes:
+     This attribute also does not have any significant relation with any other attributes. 
+     It almost spread like a cloud. If we had calculated the r value it would have come close to 0. 
+19 - fineagg vs other independent attributes:
+     It has negative linear relationship with water. 
+     It does not have any significant relation with any other attributes. 
+     It almost spread like a cloud. If we had calculated the r value it would have come close to 0. 
+20 - The reason why we are doing all this analysis is if we find any kind of dimensions which are very strongly correlated 
+     i.e. r value close to 1 or -1 such dimensions are giving same information to your algorithms, its a redundant dimension. 
+## Improvements
+     So in such cases we may want to keep one and drop the other which we should keep and which we should drop depends on 
+     again your domain expertise, which one of the dimension is more prone to errors. I would like to drop that dimension. 
+     Or we have a choice to combine these dimensions and create a composite dimension out of it. 
+     strength attribute : Relationship between dependent and independent attributes 
+     strength: Now its comparing the target column with all other independent attributes and its showing us very vital information. 
+     strength vs cement: It is linearly related to the cement. 
+     The relationship is positive and we can see that for a given value of cement we have a multiple values of strength. 
+     Which one should we pick we don't know. 
+     Hence Cement though it has positive relationship with the strength, it is not a very good predictor. It is a weak predictor. 
+     strength vs slag: There is no particular trend. 
+     strength vs age: For a given value of age, we have different values of strength. Hence, It is not a good predictor. 
+     strength vs superplastic: Other attributes does not give any strong relationship with strength. 
+     Hence, we can see that none of the independent attributes are a good predictors of the strength attribute. 
+     There is a no linear relationship between them.
+     So, we will not use Linear model 
+     
+     
